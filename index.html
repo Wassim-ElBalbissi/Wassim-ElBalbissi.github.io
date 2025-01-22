@@ -21,6 +21,116 @@
         alt="SiderAL Logo"
       />
 
+      <!-- Main Calculator Card -->
+      <div
+        class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+      >
+        <div
+          class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200"
+        >
+          <!-- Weight Input Section -->
+          <div
+            class="p-6 sm:p-8 flex flex-col items-center justify-center space-y-4"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">Body Weight</h2>
+            <div class="relative group">
+              <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-[#c2112f] to-[#ff4d6d] rounded-lg blur opacity-10 group-hover:opacity-50 transition"
+              ></div>
+              <div
+                class="relative w-40 h-20 bg-white rounded-lg flex items-center justify-center border border-red-100 shadow-sm"
+              >
+                <span
+                  id="numericInput"
+                  contenteditable="true"
+                  data-placeholder="0"
+                  class="text-4xl font-bold text-gray-800 focus:outline-none"
+                  >0</span
+                >
+                <span class="text-lg text-gray-600 ml-2">kg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Section -->
+          <div class="p-6 sm:p-8 space-y-6">
+            <!-- Treatment Dose -->
+            <div
+              class="space-y-4 bg-gradient-to-r from-red-50 to-white p-4 rounded-xl border border-red-100"
+            >
+              <h3 class="text-xl font-semibold text-[#c2112f]">
+                Treatment Dose
+              </h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div
+                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
+                >
+                  <p class="text-xs text-gray-600">Dose (mg)</p>
+                  <p class="text-xl font-bold text-gray-800" id="treatmentMg">
+                    0 mg
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
+                >
+                  <p class="text-xs text-gray-600">Dose (ml)</p>
+                  <p class="text-xl font-bold text-gray-800" id="treatmentMl">
+                    0 ml
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
+                >
+                  <p class="text-xs text-gray-600">3-Month Supply</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="treatmentBottles"
+                  >
+                    0 bottles
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prophylactic Dose -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-semibold text-[#c2112f]">
+                Prophylactic Dose
+              </h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <p class="text-xs text-gray-600">Dose (mg)</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="prophylacticMg"
+                  >
+                    0 mg
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <p class="text-xs text-gray-600">Dose (ml)</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="prophylacticMl"
+                  >
+                    0 ml
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <p class="text-xs text-gray-600">3-Month Supply</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="prophylacticBottles"
+                  >
+                    0 bottles
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Hero Section with Product Info and Images -->
       <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
         <!-- Main Content Grid -->
@@ -238,116 +348,6 @@
               is or diluted in half a glass of water or other beverage served at
               room temperature. Shake the bottle well before use.
             </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Calculator Card -->
-      <div
-        class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
-      >
-        <div
-          class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200"
-        >
-          <!-- Weight Input Section -->
-          <div
-            class="p-6 sm:p-8 flex flex-col items-center justify-center space-y-4"
-          >
-            <h2 class="text-xl font-semibold text-gray-800">Body Weight</h2>
-            <div class="relative group">
-              <div
-                class="absolute -inset-0.5 bg-gradient-to-r from-[#c2112f] to-[#ff4d6d] rounded-lg blur opacity-10 group-hover:opacity-50 transition"
-              ></div>
-              <div
-                class="relative w-40 h-20 bg-white rounded-lg flex items-center justify-center border border-red-100 shadow-sm"
-              >
-                <span
-                  id="numericInput"
-                  contenteditable="true"
-                  data-placeholder="0"
-                  class="text-4xl font-bold text-gray-800 focus:outline-none"
-                  >0</span
-                >
-                <span class="text-lg text-gray-600 ml-2">kg</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Results Section -->
-          <div class="p-6 sm:p-8 space-y-6">
-            <!-- Treatment Dose -->
-            <div
-              class="space-y-4 bg-gradient-to-r from-red-50 to-white p-4 rounded-xl border border-red-100"
-            >
-              <h3 class="text-xl font-semibold text-[#c2112f]">
-                Treatment Dose
-              </h3>
-              <div class="grid grid-cols-3 gap-4">
-                <div
-                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
-                >
-                  <p class="text-xs text-gray-600">Dose (mg)</p>
-                  <p class="text-xl font-bold text-gray-800" id="treatmentMg">
-                    0 mg
-                  </p>
-                </div>
-                <div
-                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
-                >
-                  <p class="text-xs text-gray-600">Dose (ml)</p>
-                  <p class="text-xl font-bold text-gray-800" id="treatmentMl">
-                    0 ml
-                  </p>
-                </div>
-                <div
-                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
-                >
-                  <p class="text-xs text-gray-600">3-Month Supply</p>
-                  <p
-                    class="text-xl font-bold text-gray-800"
-                    id="treatmentBottles"
-                  >
-                    0 bottles
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Prophylactic Dose -->
-            <div class="space-y-4">
-              <h3 class="text-lg font-semibold text-[#c2112f]">
-                Prophylactic Dose
-              </h3>
-              <div class="grid grid-cols-3 gap-4">
-                <div class="bg-gray-50 p-3 rounded-lg text-center">
-                  <p class="text-xs text-gray-600">Dose (mg)</p>
-                  <p
-                    class="text-xl font-bold text-gray-800"
-                    id="prophylacticMg"
-                  >
-                    0 mg
-                  </p>
-                </div>
-                <div class="bg-gray-50 p-3 rounded-lg text-center">
-                  <p class="text-xs text-gray-600">Dose (ml)</p>
-                  <p
-                    class="text-xl font-bold text-gray-800"
-                    id="prophylacticMl"
-                  >
-                    0 ml
-                  </p>
-                </div>
-                <div class="bg-gray-50 p-3 rounded-lg text-center">
-                  <p class="text-xs text-gray-600">3-Month Supply</p>
-                  <p
-                    class="text-xl font-bold text-gray-800"
-                    id="prophylacticBottles"
-                  >
-                    0 bottles
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
