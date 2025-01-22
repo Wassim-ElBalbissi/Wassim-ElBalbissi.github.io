@@ -395,14 +395,14 @@
 
     // Event Listeners
     numericInput.addEventListener("focus", (e) => {
-      console.log("Input focused.");
+      //   console.log("Input focused.");
       if (e.target.textContent.trim() === "0") {
         e.target.textContent = ""; // Clear default value
       }
     });
 
     numericInput.addEventListener("blur", (e) => {
-      console.log("Input blurred.");
+      //   console.log("Input blurred.");
       if (e.target.textContent.trim() === "") {
         e.target.textContent = "0"; // Reset to default value
       }
@@ -410,7 +410,7 @@
     });
 
     numericInput.addEventListener("input", (e) => {
-      console.log("Input event triggered.");
+      //   console.log("Input event triggered.");
 
       // Get the current caret position
       const selection = window.getSelection();
