@@ -1,0 +1,518 @@
+<head>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="min-h-screen p-4 sm:p-6 lg:p-8">
+    <div class="w-full max-w-5xl mx-auto space-y-8">
+      <!-- Logo -->
+      <img
+        src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/SiderAL%20Gocce%20Logo-01.png"
+        class="w-40 sm:w-56 transition-all hover:scale-105"
+        alt="SiderAL Logo"
+      />
+
+      <!-- Hero Section with Product Info and Images -->
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+        <!-- Main Content Grid -->
+        <div class="grid grid-cols-1">
+          <!-- Left Column: Product Images -->
+          <div class="grid grid-cols-1 items-center md:grid-cols-2">
+            <div>
+              <div class="overflow-hidden touch-pan-x relative">
+                <div
+                  class="flex w-full transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing items-center"
+                  id="imageSlider"
+                >
+                  <div
+                    class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/product/SIDERAL_SIDERAL_GOCCE_P_1.webp"
+                      alt="SiderAL Product 1"
+                      class="w-48 sm:w-64 h-auto select-none object-contain"
+                      draggable="false"
+                    />
+                  </div>
+                  <div
+                    class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/product/SIDERAL_SIDERAL_GOCCE_P_2.webp"
+                      alt="SiderAL Product 2"
+                      class="w-48 sm:w-64 h-auto select-none object-contain"
+                      draggable="false"
+                    />
+                  </div>
+                  <div
+                    class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/product/SIDERAL_SIDERAL_GOCCE_P_3.webp"
+                      alt="SiderAL Product 3"
+                      class="w-48 sm:w-64 h-auto select-none object-contain"
+                      draggable="false"
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- Dots Indicator -->
+              <div class="flex justify-center space-x-3 pb-6">
+                <button
+                  class="w-2 h-2 rounded-sm bg-[#c2112f] opacity-100 transition-opacity"
+                  onclick="goToSlide(0)"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-sm bg-[#c2112f] opacity-50 transition-opacity"
+                  onclick="goToSlide(1)"
+                ></button>
+                <button
+                  class="w-2 h-2 rounded-sm bg-[#c2112f] opacity-50 transition-opacity"
+                  onclick="goToSlide(2)"
+                ></button>
+              </div>
+            </div>
+            <div class="p-6 sm:p-8">
+              <h1 class="text-xl sm:text-2xl font-semibold text-[#c2112f] mb-2">
+                SUCROSOMIAL® IRON (0.7 mg/DROP)
+              </h1>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                SiderAL® Gocce is a liquid iron supplement that contains
+                Sucrosomial® Iron, a form of iron that is easier to absorb than
+                other forms of iron. It is available in two strengths: 0.7
+                mg/drop and 1.4 mg/drop.
+              </p>
+              <div>
+                <div class="mt-4 grid grid-cols-1 gap-2">
+                  <span
+                    class="text-sm font-medium text-[#c2112f] py-1 rounded-full flex items-center"
+                  >
+                    <span class="w-2 h-2 bg-[#c2112f] rounded-full mr-2"></span>
+                    The first Sucrosomial® Iron in drops
+                  </span>
+                  <span
+                    class="text-sm font-medium text-[#c2112f] py-1 rounded-full flex items-center"
+                  >
+                    <span class="w-2 h-2 bg-[#c2112f] rounded-full mr-2"></span>
+                    High Absorption
+                  </span>
+                  <span
+                    class="text-sm font-medium text-[#c2112f] py-1 rounded-full flex items-center"
+                  >
+                    <span class="w-2 h-2 bg-[#c2112f] rounded-full mr-2"></span>
+                    Maximum Safety
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--Key Advantages -->
+          <div class="p-6 sm:p-8 bg-gray-50/50">
+            <div class="space-y-6">
+              <h2 class="text-lg font-semibold text-gray-800">
+                Key Advantages
+              </h2>
+              <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Advantage Items -->
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_metabolism.svg"
+                      alt="Great tolerability icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >Great tolerability</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_taste.svg"
+                      alt="Does not alter taste icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >Does not alter the taste of food</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_dose.svg"
+                      alt="Easy to dose icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >Easy to dose and administer</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_taste.svg"
+                      alt="Great taste icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >Great taste</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_gluten.svg"
+                      alt="Gluten free icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >Gluten free</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_lactose.svg"
+                      alt="Lactose free icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >Lactose free</span
+                  >
+                </div>
+                <div class="flex items-center space-x-3 group">
+                  <div
+                    class="w-12 h-12 bg-[#c2112f] rounded-lg flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-105"
+                  >
+                    <img
+                      src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/icons/icon_assorbimento.svg"
+                      alt="High absorption icon"
+                      class="w-8 h-8"
+                    />
+                  </div>
+                  <span class="text-sm font-medium text-gray-700"
+                    >High absorption</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="p-6 sm:p-8">
+            <h3 class="text-sm font-semibold text-[#c2112f] mb-2">
+              Dosage Instructions
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              The recommended dosage is as follows: 1 ml per day, equal to about
+              10 drops, or as advised by your doctor. To measure the correct
+              amount, we recommend using the dropper contained in the package.
+              SiderAL® Gocce can be taken at any time of the day, either as it
+              is or diluted in half a glass of water or other beverage served at
+              room temperature. Shake the bottle well before use.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Calculator Card -->
+      <div
+        class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
+      >
+        <div
+          class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200"
+        >
+          <!-- Weight Input Section -->
+          <div
+            class="p-6 sm:p-8 flex flex-col items-center justify-center space-y-4"
+          >
+            <h2 class="text-xl font-semibold text-gray-800">Body Weight</h2>
+            <div class="relative group">
+              <div
+                class="absolute -inset-0.5 bg-gradient-to-r from-[#c2112f] to-[#ff4d6d] rounded-lg blur opacity-10 group-hover:opacity-50 transition"
+              ></div>
+              <div
+                class="relative w-40 h-20 bg-white rounded-lg flex items-center justify-center border border-red-100 shadow-sm"
+              >
+                <span
+                  id="numericInput"
+                  contenteditable="true"
+                  data-placeholder="0"
+                  class="text-4xl font-bold text-gray-800 focus:outline-none"
+                  >0</span
+                >
+                <span class="text-lg text-gray-600 ml-2">kg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Results Section -->
+          <div class="p-6 sm:p-8 space-y-6">
+            <!-- Treatment Dose -->
+            <div
+              class="space-y-4 bg-gradient-to-r from-red-50 to-white p-4 rounded-xl border border-red-100"
+            >
+              <h3 class="text-xl font-semibold text-[#c2112f]">
+                Treatment Dose
+              </h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div
+                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
+                >
+                  <p class="text-xs text-gray-600">Dose (mg)</p>
+                  <p class="text-xl font-bold text-gray-800" id="treatmentMg">
+                    0 mg
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
+                >
+                  <p class="text-xs text-gray-600">Dose (ml)</p>
+                  <p class="text-xl font-bold text-gray-800" id="treatmentMl">
+                    0 ml
+                  </p>
+                </div>
+                <div
+                  class="bg-white p-3 rounded-lg text-center shadow-sm border border-red-100"
+                >
+                  <p class="text-xs text-gray-600">3-Month Supply</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="treatmentBottles"
+                  >
+                    0 bottles
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Prophylactic Dose -->
+            <div class="space-y-4">
+              <h3 class="text-lg font-semibold text-[#c2112f]">
+                Prophylactic Dose
+              </h3>
+              <div class="grid grid-cols-3 gap-4">
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <p class="text-xs text-gray-600">Dose (mg)</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="prophylacticMg"
+                  >
+                    0 mg
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <p class="text-xs text-gray-600">Dose (ml)</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="prophylacticMl"
+                  >
+                    0 ml
+                  </p>
+                </div>
+                <div class="bg-gray-50 p-3 rounded-lg text-center">
+                  <p class="text-xs text-gray-600">3-Month Supply</p>
+                  <p
+                    class="text-xl font-bold text-gray-800"
+                    id="prophylacticBottles"
+                  >
+                    0 bottles
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const numericInput = document.getElementById("numericInput");
+
+    // Utility Functions
+    const roundToQuarter = (value) => Math.round(value * 4) / 4;
+    const calculateBottles = (value) => Math.ceil((value * 90) / 30);
+
+    // Update calculations
+    const updateDoses = () => {
+      const rawInput = numericInput.textContent.trim();
+      const bodyWeight = parseFloat(rawInput) || 0;
+
+      // Prophylactic Dose
+      const prophylacticMg = (bodyWeight * 0.7).toFixed(2);
+      const prophylacticMl = roundToQuarter(bodyWeight * 0.1);
+      const prophylacticBottles = calculateBottles(prophylacticMl);
+
+      document.getElementById(
+        "prophylacticMg"
+      ).textContent = `${prophylacticMg} mg`;
+      document.getElementById(
+        "prophylacticMl"
+      ).textContent = `${prophylacticMl} ml`;
+      document.getElementById(
+        "prophylacticBottles"
+      ).textContent = `${prophylacticBottles} bottles`;
+
+      // Treatment Dose
+      const treatmentMg = (bodyWeight * 2.1).toFixed(2);
+      const treatmentMl = roundToQuarter(bodyWeight * 0.3);
+      const treatmentBottles = calculateBottles(treatmentMl);
+
+      document.getElementById("treatmentMg").textContent = `${treatmentMg} mg`;
+      document.getElementById("treatmentMl").textContent = `${treatmentMl} ml`;
+      document.getElementById(
+        "treatmentBottles"
+      ).textContent = `${treatmentBottles} bottles`;
+    };
+
+    // Event Listeners
+    numericInput.addEventListener("focus", (e) => {
+      console.log("Input focused.");
+      if (e.target.textContent.trim() === "0") {
+        e.target.textContent = ""; // Clear default value
+      }
+    });
+
+    numericInput.addEventListener("blur", (e) => {
+      console.log("Input blurred.");
+      if (e.target.textContent.trim() === "") {
+        e.target.textContent = "0"; // Reset to default value
+      }
+      updateDoses(); // Update doses on blur
+    });
+
+    numericInput.addEventListener("input", (e) => {
+      console.log("Input event triggered.");
+
+      // Get the current caret position
+      const selection = window.getSelection();
+      const range = selection.getRangeAt(0);
+      const caretOffset = range.startOffset;
+
+      // Sanitize input to allow only numbers
+      const sanitized = e.target.textContent.replace(/[^0-9]/g, "");
+
+      // Update the content without resetting the cursor
+      e.target.textContent = sanitized;
+
+      // Restore the caret position
+      const newRange = document.createRange();
+      newRange.setStart(
+        e.target.childNodes[0],
+        Math.min(caretOffset, sanitized.length)
+      );
+      newRange.collapse(true);
+      selection.removeAllRanges();
+      selection.addRange(newRange);
+
+      // Update doses
+      updateDoses();
+    });
+
+    let currentSlide = 0;
+    const totalSlides = 2;
+
+    // Add these new drag handling functions
+    let isDragging = false;
+    let startPos = 0;
+    let currentTranslate = 0;
+    let prevTranslate = 0;
+
+    const slider = document.getElementById("imageSlider");
+
+    slider.addEventListener("mousedown", dragStart);
+    slider.addEventListener("touchstart", dragStart);
+    slider.addEventListener("mouseup", dragEnd);
+    slider.addEventListener("touchend", dragEnd);
+    slider.addEventListener("mousemove", drag);
+    slider.addEventListener("touchmove", drag);
+    slider.addEventListener("mouseleave", dragEnd);
+
+    function dragStart(e) {
+      isDragging = true;
+      startPos = getPositionX(e);
+      slider.style.cursor = "grabbing";
+    }
+
+    function drag(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+
+      const currentPosition = getPositionX(e);
+      const diff = currentPosition - startPos;
+      currentTranslate = prevTranslate + diff;
+
+      // Limit the drag to the bounds of the slider
+      const maxTranslate = -(slider.children.length - 1) * slider.clientWidth;
+      currentTranslate = Math.max(Math.min(currentTranslate, 0), maxTranslate);
+
+      slider.style.transform = `translateX(${currentTranslate}px)`;
+    }
+
+    function dragEnd() {
+      isDragging = false;
+      slider.style.cursor = "grab";
+
+      // Snap to nearest slide
+      const slideWidth = slider.clientWidth;
+      const slideIndex = Math.round(Math.abs(currentTranslate) / slideWidth);
+      goToSlide(slideIndex);
+
+      prevTranslate = -slideIndex * slideWidth;
+      currentTranslate = prevTranslate;
+    }
+
+    function getPositionX(e) {
+      return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
+    }
+
+    // Update the existing goToSlide function
+    function goToSlide(index) {
+      const slider = document.getElementById("imageSlider");
+      const slideWidth = slider.clientWidth;
+      const slideCount = slider.children.length;
+
+      if (index >= 0 && index < slideCount) {
+        currentSlide = index;
+        const offset = -currentSlide * slideWidth;
+        slider.style.transform = `translateX(${offset}px)`;
+
+        // Update dots
+        const dots = document.querySelectorAll(
+          ".flex.justify-center.space-x-3.pb-6 button"
+        );
+        dots.forEach((dot, i) => {
+          dot.style.opacity = i === index ? "1" : "0.5";
+        });
+      }
+    }
+  </script>
+</body>
