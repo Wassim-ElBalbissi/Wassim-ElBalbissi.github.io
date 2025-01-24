@@ -32,13 +32,14 @@
               <div
                 class="relative w-40 h-20 bg-white rounded-lg flex items-center justify-center border border-red-100 shadow-sm"
               >
-                <span
+                <input
+                  type="number"
                   id="numericInput"
-                  contenteditable="true"
-                  data-placeholder="0"
-                  class="text-4xl font-bold text-gray-800 focus:outline-none"
-                  >0</span
-                >
+                  value="0"
+                  min="0"
+                  max="200"
+                  class="w-24 text-4xl font-bold text-gray-800 focus:outline-none text-center [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                />
                 <span class="text-lg text-gray-600 ml-2">kg</span>
               </div>
             </div>
@@ -282,7 +283,7 @@
         <div class="text-center">
           <img
             src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/pharmapal-logo.png"
-            class="w-40 sm:w-56 mx-auto"
+            class="w-54 sm:w-56 mx-auto"
             alt="Pharmapal Logo"
           />
           <p class="text-sm text-gray-600 mt-2">Official Distributor</p>
@@ -291,8 +292,8 @@
         <div class="text-center">
           <img
             src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/pharmaneutra-logo.png"
-            class="w-54 sm:w-64 mx-auto"
-            alt="Pharma Neutra Logo"
+            class="w-40 sm:w-64 mx-auto"
+            alt="PharmaNeutra Logo"
           />
           <!-- <p class="text-sm text-gray-600 mt-2">Official Distributor</p> -->
         </div>
@@ -309,8 +310,7 @@
 
     // Update calculations
     const updateDoses = () => {
-      const rawInput = numericInput.textContent.trim();
-      const bodyWeight = parseFloat(rawInput) || 0;
+      const bodyWeight = parseFloat(numericInput.value) || 0;
 
       // Prophylactic Dose
       const prophylacticMg = (bodyWeight * 0.7).toFixed(2);
@@ -332,49 +332,7 @@
     };
 
     // Event Listeners
-    numericInput.addEventListener("focus", (e) => {
-      //   console.log("Input focused.");
-      if (e.target.textContent.trim() === "0") {
-        e.target.textContent = ""; // Clear default value
-      }
-    });
-
-    numericInput.addEventListener("blur", (e) => {
-      //   console.log("Input blurred.");
-      if (e.target.textContent.trim() === "") {
-        e.target.textContent = "0"; // Reset to default value
-      }
-      updateDoses(); // Update doses on blur
-    });
-
-    numericInput.addEventListener("input", (e) => {
-      //   console.log("Input event triggered.");
-
-      // Get the current caret position
-      const selection = window.getSelection();
-      const range = selection.getRangeAt(0);
-      const caretOffset = range.startOffset;
-
-      // Sanitize input to allow only numbers and limit to 200
-      let sanitized = e.target.textContent.replace(/[^0-9]/g, "");
-      const numValue = parseInt(sanitized) || 0;
-      if (numValue > 200) {
-        sanitized = "200";
-      }
-
-      // Update the content without resetting the cursor
-      e.target.textContent = sanitized;
-
-      // Restore the caret position
-      const newRange = document.createRange();
-      newRange.setStart(e.target.childNodes[0], Math.min(caretOffset, sanitized.length));
-      newRange.collapse(true);
-      selection.removeAllRanges();
-      selection.addRange(newRange);
-
-      // Update doses
-      updateDoses();
-    });
+    numericInput.addEventListener("input", updateDoses);
 
     let currentSlide = 0;
     const totalSlides = 2;
