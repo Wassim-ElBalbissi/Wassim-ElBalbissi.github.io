@@ -331,7 +331,85 @@
     };
 
     // Event Listeners
+<<<<<<< Updated upstream
     numericInput.addEventListener("input", updateDoses);
+=======
+    numericInput.addEventListener("focus", (e) => {
+      //   console.log("Input focused.");
+      if (e.target.textContent.trim() === "0") {
+        e.target.textContent = ""; // Clear default value
+      }
+    });
+
+    numericInput.addEventListener("blur", (e) => {
+      //   console.log("Input blurred.");
+      if (e.target.textContent.trim() === "") {
+        e.target.textContent = "0"; // Reset to default value
+      }
+      updateDoses(); // Update doses on blur
+    });
+
+    numericInput.addEventListener("input", (e) => {
+      // Prevent default behavior to have more control
+      e.preventDefault();
+
+      // Get the current caret position
+      const selection = window.getSelection();
+      const range = selection.getRangeAt(0);
+      const caretOffset = range.startOffset;
+
+      // Sanitize input: remove non-digits and convert to number
+      let sanitized = e.target.textContent.replace(/[^0-9]/g, "");
+      let numValue = parseInt(sanitized);
+
+      // Handle empty or invalid input
+      if (isNaN(numValue)) {
+        numValue = 0;
+        sanitized = "0";
+      }
+
+      // Enforce maximum limit of 200
+      if (numValue > 200) {
+        numValue = 200;
+        sanitized = "200";
+      }
+
+      // Update the content
+      e.target.textContent = sanitized;
+
+      // Restore caret position, but ensure it doesn't go beyond the content length
+      const newRange = document.createRange();
+      const textNode =
+        e.target.firstChild ||
+        e.target.appendChild(document.createTextNode(sanitized));
+      const newPosition = Math.min(caretOffset, sanitized.length);
+      newRange.setStart(textNode, newPosition);
+      newRange.setEnd(textNode, newPosition);
+      selection.removeAllRanges();
+      selection.addRange(newRange);
+
+      // Update doses
+      updateDoses();
+    });
+>>>>>>> Stashed changes
+
+    // Add keydown event listener to prevent non-numeric input
+    numericInput.addEventListener("keydown", (e) => {
+      // Allow: backspace, delete, tab, escape, enter, and numbers
+      if (
+        e.key === "Backspace" ||
+        e.key === "Delete" ||
+        e.key === "Tab" ||
+        e.key === "Escape" ||
+        e.key === "Enter" ||
+        (e.key >= "0" && e.key <= "9")
+      ) {
+        // Let it happen
+        return;
+      }
+      // Prevent any other input
+      e.preventDefault();
+    });
 
     let currentSlide = 0;
     const totalSlides = 2;
