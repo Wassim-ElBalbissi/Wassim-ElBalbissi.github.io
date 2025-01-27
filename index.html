@@ -411,6 +411,24 @@
       e.preventDefault();
     });
 
+    // Add keydown event listener to prevent non-numeric input
+    numericInput.addEventListener("keydown", (e) => {
+      // Allow: backspace, delete, tab, escape, enter, and numbers
+      if (
+        e.key === "Backspace" ||
+        e.key === "Delete" ||
+        e.key === "Tab" ||
+        e.key === "Escape" ||
+        e.key === "Enter" ||
+        (e.key >= "0" && e.key <= "9")
+      ) {
+        // Let it happen
+        return;
+      }
+      // Prevent any other input
+      e.preventDefault();
+    });
+
     let currentSlide = 0;
     const totalSlides = 2;
 
