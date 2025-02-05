@@ -1,9 +1,6 @@
 <head>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
@@ -23,16 +20,10 @@
       />
 
       <!-- Main Calculator Card -->
-      <div
-        class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100"
-      >
-        <div
-          class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200"
-        >
+      <div class="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
+        <div class="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-200">
           <!-- Weight Input Section -->
-          <div
-            class="p-6 sm:p-8 flex flex-col items-center justify-center space-y-4"
-          >
+          <div class="p-6 sm:p-8 flex flex-col items-center justify-center space-y-4">
             <h2 class="text-xl font-semibold text-gray-800">Body Weight</h2>
             <div class="relative group">
               <div
@@ -47,6 +38,7 @@
                   value="0"
                   min="0"
                   max="200"
+                  step="0.01"
                   class="w-24 text-4xl font-bold text-gray-800 focus:outline-none text-center [-moz-appearance:_textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
                 />
                 <span class="text-lg text-gray-600 ml-2">kg</span>
@@ -58,80 +50,38 @@
           <div class="p-6 sm:p-8 space-y-6">
             <!-- Prophylactic Dose -->
             <div class="space-y-4 p-4 rounded-xl border border-red-100">
-              <h3 class="text-lg font-semibold text-[#c2112f]">
-                Prophylaxis Dose
-              </h3>
+              <h3 class="text-lg font-semibold text-[#c2112f]">Prophylaxis Dose</h3>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div
-                  class="p-4 sm:p-3 rounded-lg text-center border border-red-100"
-                >
+                <div class="p-4 sm:p-3 rounded-lg text-center border border-red-100">
                   <p class="text-xs text-gray-600">Dose (mg)</p>
-                  <p
-                    class="text-lg font-bold text-gray-800"
-                    id="prophylacticMg"
-                  >
-                    0 mg
-                  </p>
+                  <p class="text-lg font-bold text-gray-800" id="prophylacticMg">0 mg</p>
                 </div>
-                <div
-                  class="p-4 sm:p-3 rounded-lg text-center border border-red-100"
-                >
+                <div class="p-4 sm:p-3 rounded-lg text-center border border-red-100">
                   <p class="text-xs text-gray-600">Dose (ml)</p>
-                  <p
-                    class="text-lg font-bold text-gray-800"
-                    id="prophylacticMl"
-                  >
-                    0 ml
-                  </p>
+                  <p class="text-lg font-bold text-gray-800" id="prophylacticMl">0 ml</p>
                 </div>
-                <div
-                  class="p-4 sm:p-3 rounded-lg text-center border border-red-100"
-                >
+                <div class="p-4 sm:p-3 rounded-lg text-center border border-red-100">
                   <p class="text-xs text-gray-600">3-Month Supply</p>
-                  <p
-                    class="text-lg font-bold text-gray-800"
-                    id="prophylacticBottles"
-                  >
-                    0 bottles
-                  </p>
+                  <p class="text-lg font-bold text-gray-800" id="prophylacticBottles">0 bottles</p>
                 </div>
               </div>
             </div>
 
             <!-- Treatment Dose -->
-            <div
-              class="space-y-4 bg-gradient-to-r from-red-200 to-white p-4 rounded-xl border border-red-100"
-            >
-              <h3 class="text-xl font-semibold text-[#c2112f]">
-                Treatment Dose
-              </h3>
+            <div class="space-y-4 bg-gradient-to-r from-red-200 to-white p-4 rounded-xl border border-red-100">
+              <h3 class="text-xl font-semibold text-[#c2112f]">Treatment Dose</h3>
               <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div
-                  class="bg-white p-4 sm:p-3 rounded-lg text-center shadow-sm border border-red-100"
-                >
+                <div class="bg-white p-4 sm:p-3 rounded-lg text-center shadow-sm border border-red-100">
                   <p class="text-xs text-gray-600">Dose (mg)</p>
-                  <p class="text-lg font-bold text-gray-800" id="treatmentMg">
-                    0 mg
-                  </p>
+                  <p class="text-lg font-bold text-gray-800" id="treatmentMg">0 mg</p>
                 </div>
-                <div
-                  class="bg-white p-4 sm:p-3 rounded-lg text-center shadow-sm border border-red-100"
-                >
+                <div class="bg-white p-4 sm:p-3 rounded-lg text-center shadow-sm border border-red-100">
                   <p class="text-xs text-gray-600">Dose (ml)</p>
-                  <p class="text-lg font-bold text-gray-800" id="treatmentMl">
-                    0 ml
-                  </p>
+                  <p class="text-lg font-bold text-gray-800" id="treatmentMl">0 ml</p>
                 </div>
-                <div
-                  class="bg-white p-4 sm:p-3 rounded-lg text-center shadow-sm border border-red-100"
-                >
+                <div class="bg-white p-4 sm:p-3 rounded-lg text-center shadow-sm border border-red-100">
                   <p class="text-xs text-gray-600">3-Month Supply</p>
-                  <p
-                    class="text-lg font-bold text-gray-800"
-                    id="treatmentBottles"
-                  >
-                    0 bottles
-                  </p>
+                  <p class="text-lg font-bold text-gray-800" id="treatmentBottles">0 bottles</p>
                 </div>
               </div>
             </div>
@@ -151,9 +101,7 @@
                   class="flex w-full transition-transform duration-300 ease-out cursor-grab active:cursor-grabbing items-center"
                   id="imageSlider"
                 >
-                  <div
-                    class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4"
-                  >
+                  <div class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4">
                     <img
                       src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/product/SIDERAL_SIDERAL_GOCCE_P_1.webp"
                       alt="SiderAL Product 1"
@@ -161,9 +109,7 @@
                       draggable="false"
                     />
                   </div>
-                  <div
-                    class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4"
-                  >
+                  <div class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4">
                     <img
                       src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/product/SIDERAL_SIDERAL_GOCCE_P_2.webp"
                       alt="SiderAL Product 2"
@@ -171,9 +117,7 @@
                       draggable="false"
                     />
                   </div>
-                  <div
-                    class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4"
-                  >
+                  <div class="w-full flex-shrink-0 flex items-center justify-center px-8 py-4">
                     <img
                       src="https://labonnesante.sgp1.cdn.digitaloceanspaces.com/sideral/product/SIDERAL_SIDERAL_GOCCE_P_3.webp"
                       alt="SiderAL Product 3"
@@ -200,17 +144,13 @@
               </div>
             </div>
             <div class="p-6 sm:p-8">
-              <h1 class="text-xl sm:text-2xl font-semibold mb-2">
-                SUCROSOMIAL® IRON (0.7 mg/DROP)
-              </h1>
+              <h1 class="text-xl sm:text-2xl font-semibold mb-2">SUCROSOMIAL® IRON (0.7 mg/DROP)</h1>
               <h2 class="text-[#c2112f] font-bold mb-2">
-                The first Sucrosomial® Iron in drops with high absorption and
-                maximum safety
+                The first Sucrosomial® Iron in drops with high absorption and maximum safety
               </h2>
               <p class="text-sm text-gray-600 leading-relaxed">
-                SiderAL® Gocce is a liquid iron supplement that contains
-                Sucrosomial® Iron, a form of iron that is easier to absorb than
-                other forms of iron.
+                SiderAL® Gocce is a liquid iron supplement that contains Sucrosomial® Iron, a form of iron that is
+                easier to absorb than other forms of iron.
               </p>
               <!-- <div>
                 <div class="mt-4 grid grid-cols-1 gap-2">
@@ -234,9 +174,7 @@
           <!--Key Advantages -->
           <div class="p-6 sm:p-8 bg-gray-50/50">
             <div class="space-y-6">
-              <h2 class="text-lg font-semibold text-gray-800">
-                Key Advantages
-              </h2>
+              <h2 class="text-lg font-semibold text-gray-800">Key Advantages</h2>
               <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- Advantage Items -->
                 <div class="flex items-center space-x-3 group">
@@ -249,9 +187,7 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >Great tolerability</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">Great tolerability</span>
                 </div>
                 <div class="flex items-center space-x-3 group">
                   <div
@@ -263,9 +199,7 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >Does not alter the taste of food</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">Does not alter the taste of food</span>
                 </div>
                 <div class="flex items-center space-x-3 group">
                   <div
@@ -277,9 +211,7 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >Easy to dose and administer</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">Easy to dose and administer</span>
                 </div>
                 <div class="flex items-center space-x-3 group">
                   <div
@@ -291,9 +223,7 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >Great taste</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">Great taste</span>
                 </div>
                 <div class="flex items-center space-x-3 group">
                   <div
@@ -305,9 +235,7 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >Gluten free</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">Gluten free</span>
                 </div>
                 <div class="flex items-center space-x-3 group">
                   <div
@@ -319,9 +247,7 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >Lactose free</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">Lactose free</span>
                 </div>
                 <div class="flex items-center space-x-3 group">
                   <div
@@ -333,27 +259,19 @@
                       class="w-8 h-8"
                     />
                   </div>
-                  <span class="text-sm font-medium text-gray-700"
-                    >High absorption</span
-                  >
+                  <span class="text-sm font-medium text-gray-700">High absorption</span>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="p-6 sm:p-8">
-            <h3 class="text-sm font-semibold text-[#c2112f] mb-2">
-              Dosage Instructions
-            </h3>
+            <h3 class="text-sm font-semibold text-[#c2112f] mb-2">Dosage Instructions</h3>
             <p class="text-sm text-gray-600 leading-relaxed">
-              <b>
-                The recommended dosage is as follows: 1 ml per day, equal to
-                about 10 drops</b
-              >, or as advised by your doctor. To measure the correct amount, we
-              recommend using the dropper contained in the package. SiderAL®
-              Gocce can be taken at any time of the day, either as it is or
-              diluted in half a glass of water or other beverage served at room
-              temperature. <b>Shake the bottle well before use.</b>
+              <b> The recommended dosage is as follows: 1 ml per day, equal to about 10 drops</b>, or as advised by your
+              doctor. To measure the correct amount, we recommend using the dropper contained in the package. SiderAL®
+              Gocce can be taken at any time of the day, either as it is or diluted in half a glass of water or other
+              beverage served at room temperature. <b>Shake the bottle well before use.</b>
             </p>
           </div>
         </div>
@@ -399,15 +317,9 @@
       const prophylacticMl = roundToQuarter(bodyWeight * 0.1);
       const prophylacticBottles = calculateBottles(prophylacticMl);
 
-      document.getElementById(
-        "prophylacticMg"
-      ).textContent = `${prophylacticMg} mg`;
-      document.getElementById(
-        "prophylacticMl"
-      ).textContent = `${prophylacticMl} ml`;
-      document.getElementById(
-        "prophylacticBottles"
-      ).textContent = `${prophylacticBottles} bottles`;
+      document.getElementById("prophylacticMg").textContent = `${prophylacticMg} mg`;
+      document.getElementById("prophylacticMl").textContent = `${prophylacticMl} ml`;
+      document.getElementById("prophylacticBottles").textContent = `${prophylacticBottles} bottles`;
 
       // Treatment Dose
       const treatmentMg = (bodyWeight * 2.1).toFixed(2);
@@ -416,15 +328,21 @@
 
       document.getElementById("treatmentMg").textContent = `${treatmentMg} mg`;
       document.getElementById("treatmentMl").textContent = `${treatmentMl} ml`;
-      document.getElementById(
-        "treatmentBottles"
-      ).textContent = `${treatmentBottles} bottles`;
+      document.getElementById("treatmentBottles").textContent = `${treatmentBottles} bottles`;
     };
 
     // Event Listeners
     numericInput.addEventListener("input", (e) => {
-      // Get the current value and sanitize it
       let value = e.target.value;
+
+      // Enforce 2 decimal places
+      if (value.includes(".")) {
+        const [whole, decimal] = value.split(".");
+        if (decimal && decimal.length > 2) {
+          value = `${whole}.${decimal.slice(0, 2)}`;
+          e.target.value = value;
+        }
+      }
 
       // Ensure the value is within bounds (0-200)
       if (value > 200) {
@@ -438,16 +356,21 @@
 
     // Add keydown event listener to prevent non-numeric input
     numericInput.addEventListener("keydown", (e) => {
-      // Allow: backspace, delete, tab, escape, enter, and numbers
+      // Allow: backspace, delete, tab, escape, enter, numbers, and decimal point
       if (
         e.key === "Backspace" ||
         e.key === "Delete" ||
         e.key === "Tab" ||
         e.key === "Escape" ||
         e.key === "Enter" ||
-        (e.key >= "0" && e.key <= "9")
+        (e.key >= "0" && e.key <= "9") ||
+        e.key === "." ||
+        e.key === ","
       ) {
-        // Let it happen
+        // Prevent multiple decimal points
+        if ((e.key === "." || e.key === ",") && numericInput.value.includes(".")) {
+          e.preventDefault();
+        }
         return;
       }
       // Prevent any other input
@@ -523,9 +446,7 @@
         slider.style.transform = `translateX(${offset}px)`;
 
         // Update dots
-        const dots = document.querySelectorAll(
-          ".flex.justify-center.space-x-3.pb-6 button"
-        );
+        const dots = document.querySelectorAll(".flex.justify-center.space-x-3.pb-6 button");
         dots.forEach((dot, i) => {
           dot.style.opacity = i === index ? "1" : "0.5";
         });
